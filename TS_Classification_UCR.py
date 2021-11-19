@@ -23,9 +23,9 @@ from sktime.datatypes._panel._convert import (
 )
 
 
-datasets = ["Yoga","FaceAll","UWaveGestureLibraryAll","ACSF1","ShapesAll","Strawberry","Wine","Symbols","InsectWingbeatSound"]
+datasets = ["Adiac"]
 path = "G:\\MLDatasets\\UCR" 
-n_estimators_ = 50000
+n_estimators_ = 10000
 if exists("results.txt"):
     os.remove("results.txt")
 with open("results.txt", "a") as logfile:

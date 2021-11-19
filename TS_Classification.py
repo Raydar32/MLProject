@@ -21,7 +21,7 @@ from sktime.datatypes._panel._convert import (
 
 
 path = "G:\\MLDatasets\\UCR" 
-d_setname = "Coffee"
+d_setname = "Adiac"
 train_x,train_y= load_from_ucr_tsv_to_dataframe(path + "\\" + d_setname + "\\" + d_setname + "_TRAIN.tsv"  )
 
 test_x, test_y = load_from_ucr_tsv_to_dataframe(path + "\\" + d_setname + "\\" + d_setname + "_TEST.tsv" )
