@@ -1,0 +1,88 @@
+Running:
+src/main.py --output_dir experiments --comment classification Wine --name Wine --records_file Classification_records.xls --data_dir TransformerDatasetsClassification/Wine/ --data_class tsra --pattern TRAIN --val_pattern TEST --epochs 100 --lr 0.001 --optimizer RAdam --pos_encoding learnable --task classification --key_metric accuracy --batch_size 32 --d_model 128 --global_reg --normalization_layer=BatchNorm
+
+Using device: cpu
+Loading and preprocessing data ...
+57 samples may be used for training
+54 samples will be used for validation
+0 samples will be used for testing
+Creating model ...
+Model:
+TSTransformerEncoderClassiregressor(
+  (project_inp): Linear(in_features=1, out_features=128, bias=True)
+  (pos_enc): LearnablePositionalEncoding(
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (transformer_encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0): TransformerBatchNormEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (linear1): Linear(in_features=128, out_features=256, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=256, out_features=128, bias=True)
+        (norm1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (norm2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerBatchNormEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (linear1): Linear(in_features=128, out_features=256, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=256, out_features=128, bias=True)
+        (norm1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (norm2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+      (2): TransformerBatchNormEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (linear1): Linear(in_features=128, out_features=256, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=256, out_features=128, bias=True)
+        (norm1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (norm2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (dropout1): Dropout(p=0.1, inplace=False)
+  (output_layer): Linear(in_features=29952, out_features=2, bias=True)
+)
+Total number of parameters: 487554
+Trainable parameters: 487554
+Evaluating on validation set ...
+Validation runtime: 0.0 hours, 0.0 minutes, 0.7697010040283203 seconds
+
+Avg val. time: 0.0 hours, 0.0 minutes, 0.7697010040283203 seconds
+Avg batch val. time: 0.38485050201416016 seconds
+Avg sample val. time: 0.014253722296820747 seconds
+Epoch 0 Validation Summary: epoch: 0.000000 | loss: 11.004172 | accuracy: 0.500000 | precision: 0.500000 | AUROC: 0.500000 | AUPRC: 0.750000 | 
+Starting training...
+Epoch 1 Training Summary: epoch: 1.000000 | loss: 0.674538 | 
+Epoch runtime: 0.0 hours, 0.0 minutes, 2.7915358543395996 seconds
+
+Avg epoch train. time: 0.0 hours, 0.0 minutes, 2.7915358543395996 seconds
+Avg batch train. time: 1.3957679271697998 seconds
+Avg sample train. time: 0.048974313234028066 seconds
+Evaluating on validation set ...
+Validation runtime: 0.0 hours, 0.0 minutes, 0.5985448360443115 seconds
+
+Avg val. time: 0.0 hours, 0.0 minutes, 0.6841229200363159 seconds
+Avg batch val. time: 0.34206146001815796 seconds
+Avg sample val. time: 0.01266894296363548 seconds
+Epoch 1 Validation Summary: epoch: 1.000000 | loss: 1.892111 | accuracy: 0.500000 | precision: 0.500000 | AUROC: 0.651578 | AUPRC: 0.565618 | 
+Epoch 2 Training Summary: epoch: 2.000000 | loss: 0.722755 | 
+Epoch runtime: 0.0 hours, 0.0 minutes, 2.8706085681915283 seconds
+
+Avg epoch train. time: 0.0 hours, 0.0 minutes, 2.831072211265564 seconds
+Avg batch train. time: 1.415536105632782 seconds
+Avg sample train. time: 0.0496679335309748 seconds
+Evaluating on validation set ...

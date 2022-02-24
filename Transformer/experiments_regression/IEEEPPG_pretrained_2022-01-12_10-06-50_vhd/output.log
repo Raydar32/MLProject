@@ -1,0 +1,5 @@
+Running:
+src/main.py --output_dir experiments_regression --comment pretraining IEEEPPG --name IEEEPPG_pretrained --records_file Imputation_Regression_records.xls --data_dir TransformerDatasetsRegression/IEEEPPG/ --data_class tsra --pattern TRAIN --val_ratio 0.2 --epochs 100 --lr 0.001 --optimizer RAdam --batch_size 32 --pos_encoding learnable --d_model 128
+
+Using device: cpu
+Loading and preprocessing data ...
